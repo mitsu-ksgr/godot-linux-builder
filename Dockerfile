@@ -1,6 +1,6 @@
 FROM debian:11-slim
 
-Arg GODOT_VERSION=4.6
+ARG GODOT_VERSION=4.6
 
 
 Run apt-get update && apt-get install -y --no-install-recommends \
