@@ -8,9 +8,8 @@ Run apt-get update && apt-get install -y --no-install-recommends \
     scons \
     pkg-config \
     libx11-dev libxcursor-dev libxinerama-dev libxi-dev libxrandr-dev \
-    libfontconfig1 libasound2-dev libpulse-dev \
-    libgl1-mesa-dev \
-    ca-certificates wget unzip git python3 \
+    libfontconfig1 libasound2-dev libpulse-dev libgl1-mesa-dev \
+    ca-certificates openssh-client wget unzip git python3 \
     && rm -rf /var/lib/apt/lists/*
 
 
