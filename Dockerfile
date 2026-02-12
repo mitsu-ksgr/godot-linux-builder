@@ -9,9 +9,14 @@ Run apt-get update && apt-get install -y --no-install-recommends \
     pkg-config \
     libx11-dev libxcursor-dev libxinerama-dev libxi-dev libxrandr-dev \
     libfontconfig1 libasound2-dev libpulse-dev libgl1-mesa-dev \
-    ca-certificates openssh-client wget zip unzip git python3 \
+    ca-certificates gpg openssh-client wget curl zip unzip git python3 \
     && rm -rf /var/lib/apt/lists/*
 
+# Install gh command
+RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" > /etc/apt/sources.list.d/github-cli.list \
+    && apt-get update && apt-get install -y gh \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install godot
 WORKDIR /godot
