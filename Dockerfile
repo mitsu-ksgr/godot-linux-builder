@@ -3,7 +3,7 @@ FROM debian:11-slim
 ARG GODOT_VERSION=4.6
 
 
-Run apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     scons \
     pkg-config \
