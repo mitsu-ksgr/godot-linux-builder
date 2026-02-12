@@ -9,7 +9,7 @@ Run apt-get update && apt-get install -y --no-install-recommends \
     pkg-config \
     libx11-dev libxcursor-dev libxinerama-dev libxi-dev libxrandr-dev \
     libfontconfig1 libasound2-dev libpulse-dev libgl1-mesa-dev \
-    ca-certificates openssh-client wget unzip git python3 \
+    ca-certificates openssh-client wget zip unzip git python3 \
     && rm -rf /var/lib/apt/lists/*
 
 
