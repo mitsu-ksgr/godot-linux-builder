@@ -4,7 +4,7 @@ ARG GODOT_VERSION=4.6
 
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
+    build-essential mingw-w64 \
     scons \
     pkg-config \
     libx11-dev libxcursor-dev libxinerama-dev libxi-dev libxrandr-dev \
